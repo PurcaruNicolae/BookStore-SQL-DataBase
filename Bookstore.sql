@@ -1,6 +1,8 @@
-    create database  bookstore;
-	use bookstore;
-
+  	--1)Create the "bookstore" database 
+   	create database  bookstore;
+		use bookstore;
+		
+	--2) Create the "author" and "book" table
 	create table author (
 		id tinyint(4) primary key auto_increment,
 		namea varchar(50),
@@ -21,7 +23,8 @@
 		foreign key (id_author) references author(id)
 		
 	);
-
+	
+	--3)Populate the "author" and "book" table 
 	insert into author values
 		(null,'Marquez','Gabriel Garcia','Columbia','1927-03-06'),
 		(null,'Verne','Jules','Fryearta','1828-02-08'),
@@ -39,11 +42,9 @@
 		(null,'Ingeri si demoni',4877,default,'2017-06-21',47.00,6),
 		(null,'Marile speryearte',3265,default,'2015-07-21',38.00,5),
 		(null,'O calatorie spre centrul pamyeartului',5897,default,'2017-03-06',25.00,2);
+			
 		
-		
-		
-		
-		-- 2)
+	-- 2)
 	create view Info as select concat_ws('/',surname, namea) as namea_author, 
 		count( title) as number_of_book from author a join book c on c.id_author = a.id
 		group by namea_author
