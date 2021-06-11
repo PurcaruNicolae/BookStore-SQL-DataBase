@@ -44,7 +44,7 @@
 		(null,'O calatorie spre centrul pamyeartului',5897,default,'2017-03-06',25.00,2);
 			
 		
-	-- 2)
+	-- 4)Create a view which will display all the authors who have more or equal than 2 books.
 	create view Info as select concat_ws('/',surname, namea) as namea_author, 
 		count( title) as number_of_book from author a join book c on c.id_author = a.id
 		group by namea_author
@@ -56,17 +56,12 @@
 	 
 	 
 	 
-	 -- 3)
-	 
-	 -- select title from book where id_author = 
-		-- (select id from author where namea = 'Verne');
-		
+	 -- 5)Display all the book title of the author who wrote the book '50000 de leghe sub mari'.
 	 select title from book where id_author = 
 		(select id_author from book where title = '50000 de leghe sub mari'); 
 		
 		
-	-- 4)
-
+	-- 6)
 	delimiter //
 	create function book_details (id_book int) returns varchar(1000)
 	begin
@@ -76,14 +71,9 @@
 		
 		select title, concat_ws(' ',surname,namea) as namea_author
 			into title_c, author_c from book c left join author a on c.id_author = a.id
-			where c.id = id_book;
-			
-		set sir = concat_ws('-',title_c,author_c);
-		
-		return sir;
-		
-		
-		
+			where c.id = id_book;		
+		set sir = concat_ws('-',title_c,author_c);		
+		return sir;	
 	end
 	//
 	delimiter ; 
