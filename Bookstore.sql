@@ -61,7 +61,7 @@
 		(select id_author from book where title = '50000 de leghe sub mari'); 
 		
 		
-	-- 6)
+	-- 6)Create a function which has as input parameter an "id" of "book" and return a single row made of "title" and "author".
 	delimiter //
 	create function book_details (id_book int) returns varchar(1000)
 	begin
@@ -83,9 +83,8 @@
 	select book_details(1);
 
 
-	-- 5)
-
-
+	-- 7)Create a procedure which has an input parameter "year of the book" and "maximum price"
+	-- and display a list with all the books with the conditions to respect the input parameters.
 	delimiter //
 	create procedure listaing_book_date(in book_year int, in prag_price double)
 	begin
@@ -119,8 +118,9 @@
 	call listaing_book_date(2017,30);
 
 
-	-- Bonus
-
+	
+	-- 8)Create a trigger which will be activated after insert into book table.
+	-- The trigger need to display a message as follows: "New book:(title of the book)".
 	create table log_book(
 		id tinyint primary key auto_increment,
 		mesaj varchar(1000) not null);
@@ -132,7 +132,7 @@
 	create trigger Decl after insert on book for each row
 	begin
 		declare mesaj varchar(1000);
-		set mesaj = concat('book noua: ', new.title);
+		set mesaj = concat('New book: ', new.title);
 		insert into log_book values (null, mesaj);
 		
 	end
