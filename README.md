@@ -18,7 +18,8 @@ to create the table "book" and "author" with a relation of one to many between t
   <li>Create a function which has as input parameter an "id" of "book" and return a single row made of "title" and
     "author".</li>
   <img src="Images/img6.png" width=400px>
-  <li>Create a procedure which has an input parameter "year of the book" and "maximum price"</li>
+  <li>Create a procedure which has an input parameter "year of the book" and "maximum price
+    and display a list with all the books with the conditions to respect the input parameters"</li>
   <img src="Images/img8.png" width=400px>
   <li>Create a trigger which will be activated after insert into book table.</li>
   <img src="Images/img7.png" width=400px>
