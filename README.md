@@ -19,13 +19,8 @@ to create the table "book" and "author" with a relation of one to many between t
     "author".</li>
   <img src="Images/img6.png" width=400px>
   <li>Create a procedure which has an input parameter "year of the book" and "maximum price"</li>
-  <img src="Images/img7.png" width=400px>
-  <li>Create a trigger which will be activated after insert into book table.</li>
   <img src="Images/img8.png" width=400px>
+  <li>Create a trigger which will be activated after insert into book table.</li>
+  <img src="Images/img7.png" width=400px>
 </ul>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-
 
