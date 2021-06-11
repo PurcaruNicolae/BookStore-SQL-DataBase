@@ -9,7 +9,20 @@ to create the table "book" and "author" with a relation of one to many between t
 <img src="Images/img2.png" width=600px>
 <p>Book table:</p>
 <img src="Images/img3.png" width=600px>
-<p></p>
+<p>Next, some queries will be performed as follows:</p>
+<ul>
+  <li>Create a view which will display all the authors who have more or equal than 2 books.</li>
+  <img src="Images/img4.png" width=400px>
+  <li>Display all the book title of the author who wrote the book '50000 de leghe sub mari'.</li>
+  <img src="Images/img5.png" width=400px>
+  <li>Create a function which has as input parameter an "id" of "book" and return a single row made of "title" and
+    "author".</li>
+  <img src="Images/img6.png" width=400px>
+  <li>Create a procedure which has an input parameter "year of the book" and "maximum price"</li>
+  <img src="Images/img7.png" width=400px>
+  <li>Create a trigger which will be activated after insert into book table.</li>
+  <img src="Images/img8.png" width=400px>
+</ul>
 <p></p>
 <p></p>
 <p></p>
